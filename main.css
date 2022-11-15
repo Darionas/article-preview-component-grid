@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+@import url(reset.css);
+@import url(FM_part.css);
+
+
+:root {
+    /* colors */
+    --clr-primary-bgr: hsl(210, 46%, 95%);
+    --clr-secondary-bgr: hsl(0, 0%, 100%);
+    --clr-vdark-grayishBlue:  hsl(217, 19%, 35%);
+    --clr-darkBlue: hsl(214, 17%, 51%);
+    --clr-grayishBlue: hsl(212, 23%, 69%);
+
+    /* fonts */
+    --ff-primary: 'Manrope', sans-serif;
+    --fw-500: 500;
+    --fw-700: 700;
+    /* font-size: 13px; */
+}
+
+/* typography */
+html {
+    /* 62.5% of 16px browser font size is 10px */
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    /* It returns default value of browser (16px) */
+    font-size: 1.6em;
+    min-height: 100%;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* typography end */
+
+body {
+    font-family: var(--ff-primary);
+    background-color: var(--clr-primary-bgr);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------------------Mobile layout-------------------------*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 1fr 1fr;
+    grid-template-areas:
+        'imgo'
+        'container'
+        'attribution';
+    min-width: 37.5rem;
+    justify-items: center;
+    /*border: 2px solid green;*/
+}
+
+/* style 1st component - mobile */
+.imgo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'drawing';
+    width: 80%;
+    padding-top: 3rem;
+    /*justify-self: center;*/
+    /*border: 2px solid yellow;*/
+}
+
+.drawing {
+    align-self: end;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+}
+
+/* style 2nd component - mobile */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'heading'
+        'article'
+        'author'
+        'icons';
+    width: 80%;
+    background-color: var(--clr-secondary-bgr); 
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;   
+    align-items: center;
+    /*border: 2px solid green;*/
+}
+
+.heading {
+    font-size: 4vw;
+    font-weight: var(--fw-700);
+    padding: 1.6rem 1.6rem 0.8rem 1.6rem;
+    /*border: 2px solid green;*/
+}
+
+.article {
+    font-size: 3.7vw;
+    font-weight: var(--fw-500);
+    padding: 0.8rem 1.6rem 2rem 1.6rem;
+    /*border: 2px solid green;*/
+}
+
+.author {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-areas:
+        'author_photo about_author arrow_btn';
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    padding: 1.2rem 0 1.2rem 0;
+    align-items: center;
+    /*border: 2px solid green;*/
+    /*display: none;*/
+}
+
+.author_photo {
+    width: 60%;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+    /*border: 2px solid green;*/
+}
+
+.about_author {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'author_name'
+        'date';
+    width: 100%;
+    justify-items: start;
+    /*border: 2px solid green;*/
+}
+
+.author_name {
+    font-size: 3vw;
+    font-weight: var(--fw-700);
+    width: 100%;
+    align-self: end;
+    /*border: 2px solid green;*/
+}
+
+.date {
+    width: 100%;
+    font-size: 3vw;
+    font-weight: var(--fw-500);
+    /*border: 2px solid green;*/
+}
+
+.arrow_btn {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'arrow_1'
+        'tooltiptext';
+    width: 9vw;
+    justify-self: end;
+    margin-right: 2rem;
+    /*border: 2px solid green;*/
+}
+
+.arrow_1 {
+    width: 100%;
+    padding: 1.8vw;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+    background-color: var(--clr-primary-bgr);
+    /*border: 2px solid green;*/
+}
+
+.tooltiptext {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'share_tooltip facebook_tooltip twiter_tooltip pinterest_tooltip . arrow_3';
+    display: none;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'text facebook_icon twitter_icon pinterest_icon . arrow_2';
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    background-color: var(--clr-vdark-grayishBlue);
+    padding: 2.5rem 0 2.5rem 0;
+    display: none;
+    /*border: 2px solid green;*/
+}
+
+.text {
+    font-size: 2.6vw;
+    font-weight: var(--fw-500);
+    color: var(--clr-grayishBlue);
+    letter-spacing: 0.4rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.facebook_icon {
+    width: 5.5vw;
+    justify-self: center;
+    align-self: center;
+}
+
+.twitter_icon {
+    width: 5.5vw;
+    justify-self: center;
+    align-self: center;
+}
+
+.pinterest_icon {
+    width: 5.5vw;
+    justify-self: center;
+    align-self: center;
+}
+
+.arrow_2 {
+    width: 6vw;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin-right: 3rem;
+    justify-self: center;
+    align-self: center;
+    color: white;
+    background-color: var(--clr-darkBlue);
+    /*border: 2px solid green;*/
+}
+
+@media only screen and (max-width: 330px) {
+    
+    .grid-container {
+        margin-left: 7rem;
+    }
+
+    .arrow_1 {
+        width: 10vw;
+    }
+
+}
+
+/* style 3rd component - mobile */
+/* 3rd component styled in external stylesheet */
+
+
+/*---------------------Desktop layout-------------------------*/
+@media screen and (min-width: 48rem) {
+    .grid-container {
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-template-rows: 1fr 0.2fr;
+        grid-template-areas:
+            'imgo container'
+            'attribution attribution';
+        gap: 0;
+        padding-top: 4rem;
+        justify-items: center;
+        /*border: 2px solid red;*/
+    }
+        
+    .imgo {
+        justify-self: end;
+        align-items: start;
+        padding-top: 0;
+        /*border: 2px solid yellow;*/
+    }
+
+    .drawing {
+        border-bottom-left-radius: 1.2rem;
+        border-top-right-radius: 0;
+        height: 100%;
+    }
+
+    .container {
+        justify-self: start;
+        align-self: start;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1.2rem;
+        height: 100%;
+        /*border: 2px solid blue;*/
+    }
+
+    .heading {
+        font-size: 1.3rem;
+        padding: 2.5rem 2.5rem 0.5rem 2.5rem;
+    }
+
+    .article {
+        font-size: 1rem;
+        /*padding: 0.8rem 1.6rem 1rem 2.5rem;*/
+        padding: 1rem 2.5rem 0.5rem 2.5rem;
+    }
+
+    .author {
+        border-bottom-left-radius: 0;
+        padding: 1rem 0 1rem 0;
+        margin-top: 2rem;
+        visibility: visible;
+        /*border: 2px solid green;*/
+    }
+
+     .author_photo {
+        width: 45%;
+    }
+
+    .author_name {
+        font-size: 1rem;
+        margin-left: -1rem;
+    }
+
+    .date {
+        font-size: 1rem;
+        margin-left: -1rem;
+    }
+
+    .arrow_btn {
+        width: 4rem;
+    }
+
+    .arrow_1 {
+        padding: 0.8rem; 
+    }
+
+    .icons {
+        display: none;
+    }
+
+/* style 1st component - desktop */
+
+/* style 2nd component - desktop */
+    
+/* style 3rd component - desktop */
+    
+}
+/*------------------grid area names---------------------------*/
+
+.imgo {
+    grid-area: imgo;
+}
+
+.drawing {
+    grid-area: drawing;
+}
+
+.container {
+    grid-area: container;
+}
+
+.heading {
+    grid-area: heading;
+}
+
+.article {
+    grid-area: article;
+}
+
+.author {
+    grid-area: author;
+}
+
+.author_photo {
+    grid-area: author_photo;
+}
+
+.about_author {
+    grid-area: about_author;
+}
+
+.author_name {
+    grid-area: author_name;
+}
+
+.date {
+    grid-area: date;
+}
+
+.arrow_btn {
+    grid-area: arrow_btn;
+}
+
+.arrow_1 {
+    grid-area: arrow_1;
+}
+
+.tooltiptext {
+    grid-area: tooltiptext;
+}
+
+.share_tooltip {
+    grid-area: share_tooltip;
+}
+
+.facebook_tooltip {
+    grid-area: facebook_toltip;
+}
+
+.twiter_tooltip {
+    grid-area: twiter_tooltip;
+}
+
+.pinterest_tooltip {
+    grid-area: pinterest_tooltip;
+}
+
+.arrow_3 {
+    grid-area: arrow_3;
+}
+
+.icons {
+    grid-area: icons;
+}
+
+.text {
+    grid-area: text;
+}
+
+.facebook_icon {
+    grid-area: facebook_icon;
+}
+
+.twitter_icon {
+    grid-area: twitter_icon;
+}
+
+.pinterest_icon {
+    grid-area: pinterest_icon;
+}
+
+.arrow_2 {
+    grid-area: arrow_2;
+}
+
+.attribution {
+    grid-area: attribution;
+}
