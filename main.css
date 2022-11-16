@@ -160,12 +160,16 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-        'arrow_1'
-        'tooltiptext';
+        'tooltiptext'
+        'arrow_1';
     width: 9vw;
     justify-self: end;
     margin-right: 2rem;
     /*border: 2px solid green;*/
+}
+
+.tooltiptext > * {
+    display: none;
 }
 
 .arrow_1 {
@@ -176,14 +180,6 @@ body {
     align-self: center;
     background-color: var(--clr-primary-bgr);
     /*border: 2px solid green;*/
-}
-
-.tooltiptext {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        'share_tooltip facebook_tooltip twiter_tooltip pinterest_tooltip . arrow_3';
-    display: none;
 }
 
 .icons {
@@ -256,6 +252,10 @@ body {
 
 /*---------------------Desktop layout-------------------------*/
 @media screen and (min-width: 48rem) {
+   /* * {
+        border: 2px solid green;
+    }*/
+
     .grid-container {
         grid-template-columns: 0.4fr 0.6fr;
         grid-template-rows: 1fr 0.2fr;
@@ -287,6 +287,7 @@ body {
         border-bottom-left-radius: 0;
         border-top-right-radius: 1.2rem;
         height: 100%;
+        position: relative;
         /*border: 2px solid blue;*/
     }
 
@@ -325,10 +326,55 @@ body {
 
     .arrow_btn {
         width: 4rem;
+        position: relative;
     }
 
     .arrow_1 {
         padding: 0.8rem; 
+    }
+
+    .tooltiptext {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            'share_tooltip facebook_tooltip twiter_tooltip pinterest_tooltip';
+        gap: 0.4rem;
+        background-color: var(--clr-vdark-grayishBlue);
+        width: 20rem;
+        justify-self: center;
+        justify-items: center;
+        align-items: center;
+        border-radius: 0.8rem;
+        padding: 1.2rem 1.4rem 1.2rem 1.4rem;
+        z-index: 1;
+        position: absolute;
+        bottom: 2rem;
+        display: none;
+        /*border: 2px solid green;*/
+    }
+
+    .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -1rem;
+        border-width: 1rem;
+        border-style: solid;
+        border-color: var(--clr-vdark-grayishBlue) transparent transparent transparent;
+      }  
+
+      [class*='_tooltip'] {
+         width: 50%;
+         display: grid;
+    }
+
+    .share_tooltip{
+        width: 100%;
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+        color: var(--clr-grayishBlue);
+        justify-self: center;
     }
 
     .icons {
@@ -401,7 +447,7 @@ body {
 }
 
 .facebook_tooltip {
-    grid-area: facebook_toltip;
+    grid-area: facebook_tooltip;
 }
 
 .twiter_tooltip {
@@ -410,10 +456,6 @@ body {
 
 .pinterest_tooltip {
     grid-area: pinterest_tooltip;
-}
-
-.arrow_3 {
-    grid-area: arrow_3;
 }
 
 .icons {
