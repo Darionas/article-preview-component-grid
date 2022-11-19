@@ -57,7 +57,6 @@ body {
         'attribution';
     min-width: 37.5rem;
     justify-items: center;
-    /*border: 2px solid green;*/
 }
 
 /* style 1st component - mobile */
@@ -68,8 +67,6 @@ body {
         'drawing';
     width: 80%;
     padding-top: 3rem;
-    /*justify-self: center;*/
-    /*border: 2px solid yellow;*/
 }
 
 .drawing {
@@ -92,21 +89,18 @@ body {
     border-bottom-left-radius: 1.2rem;
     border-bottom-right-radius: 1.2rem;   
     align-items: center;
-    /*border: 2px solid green;*/
 }
 
 .heading {
     font-size: 4vw;
     font-weight: var(--fw-700);
     padding: 1.6rem 1.6rem 0.8rem 1.6rem;
-    /*border: 2px solid green;*/
 }
 
 .article {
     font-size: 3.7vw;
     font-weight: var(--fw-500);
     padding: 0.8rem 1.6rem 2rem 1.6rem;
-    /*border: 2px solid green;*/
 }
 
 .author {
@@ -118,8 +112,6 @@ body {
     border-bottom-right-radius: 1.2rem;
     padding: 1.2rem 0 1.2rem 0;
     align-items: center;
-    /*border: 2px solid green;*/
-    /*display: none;*/
 }
 
 .author_photo {
@@ -127,7 +119,6 @@ body {
     border-radius: 50%;
     justify-self: center;
     align-self: center;
-    /*border: 2px solid green;*/
 }
 
 .about_author {
@@ -138,7 +129,6 @@ body {
         'date';
     width: 100%;
     justify-items: start;
-    /*border: 2px solid green;*/
 }
 
 .author_name {
@@ -146,30 +136,22 @@ body {
     font-weight: var(--fw-700);
     width: 100%;
     align-self: end;
-    /*border: 2px solid green;*/
 }
 
 .date {
     width: 100%;
     font-size: 3vw;
     font-weight: var(--fw-500);
-    /*border: 2px solid green;*/
 }
 
 .arrow_btn {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-        'tooltiptext'
         'arrow_1';
     width: 9vw;
     justify-self: end;
     margin-right: 2rem;
-    /*border: 2px solid green;*/
-}
-
-.tooltiptext > * {
-    display: none;
 }
 
 .arrow_1 {
@@ -179,23 +161,22 @@ body {
     justify-self: center;
     align-self: center;
     background-color: var(--clr-primary-bgr);
-    /*border: 2px solid green;*/
 }
 
 .icons {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-        'text facebook_icon twitter_icon pinterest_icon . arrow_2';
+        'share_icon facebook_icon twitter_icon pinterest_icon . arrow_2';
     border-bottom-left-radius: 1.2rem;
     border-bottom-right-radius: 1.2rem;
     background-color: var(--clr-vdark-grayishBlue);
-    padding: 2.5rem 0 2.5rem 0;
+    padding: 2rem;
     display: none;
-    /*border: 2px solid green;*/
 }
 
-.text {
+
+.share_icon {
     font-size: 2.6vw;
     font-weight: var(--fw-500);
     color: var(--clr-grayishBlue);
@@ -223,15 +204,13 @@ body {
 }
 
 .arrow_2 {
-    width: 6vw;
+    width: 9vw;
     border-radius: 50%;
-    padding: 0.5rem;
-    margin-right: 3rem;
+    padding: 1.3vw;
     justify-self: center;
     align-self: center;
     color: white;
     background-color: var(--clr-darkBlue);
-    /*border: 2px solid green;*/
 }
 
 @media only screen and (max-width: 330px) {
@@ -252,9 +231,6 @@ body {
 
 /*---------------------Desktop layout-------------------------*/
 @media screen and (min-width: 48rem) {
-   /* * {
-        border: 2px solid green;
-    }*/
 
     .grid-container {
         grid-template-columns: 0.4fr 0.6fr;
@@ -265,14 +241,13 @@ body {
         gap: 0;
         padding-top: 4rem;
         justify-items: center;
-        /*border: 2px solid red;*/
     }
-        
+      
+/* style 1st component - desktop */    
     .imgo {
         justify-self: end;
         align-items: start;
         padding-top: 0;
-        /*border: 2px solid yellow;*/
     }
 
     .drawing {
@@ -281,6 +256,7 @@ body {
         height: 100%;
     }
 
+/* style 2nd component - desktop */
     .container {
         justify-self: start;
         align-self: start;
@@ -288,7 +264,6 @@ body {
         border-top-right-radius: 1.2rem;
         height: 100%;
         position: relative;
-        /*border: 2px solid blue;*/
     }
 
     .heading {
@@ -298,7 +273,6 @@ body {
 
     .article {
         font-size: 1rem;
-        /*padding: 0.8rem 1.6rem 1rem 2.5rem;*/
         padding: 1rem 2.5rem 0.5rem 2.5rem;
     }
 
@@ -307,7 +281,6 @@ body {
         padding: 1rem 0 1rem 0;
         margin-top: 2rem;
         visibility: visible;
-        /*border: 2px solid green;*/
     }
 
      .author_photo {
@@ -333,27 +306,25 @@ body {
         padding: 0.8rem; 
     }
 
-    .tooltiptext {
+    .icons {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
         grid-template-areas:
-            'share_tooltip facebook_tooltip twiter_tooltip pinterest_tooltip';
-        gap: 0.4rem;
-        background-color: var(--clr-vdark-grayishBlue);
+        'share_icon facebook_icon twitter_icon pinterest_icon';
         width: 20rem;
         justify-self: center;
         justify-items: center;
         align-items: center;
         border-radius: 0.8rem;
-        padding: 1.2rem 1.4rem 1.2rem 1.4rem;
+        padding: 1.2rem 1.6rem 1.2rem 1.8rem;
         z-index: 1;
         position: absolute;
-        bottom: 2rem;
+        margin-bottom: 19rem;
+        margin-right: -31rem;
         display: none;
-        /*border: 2px solid green;*/
     }
 
-    .tooltiptext::after {
+    .icons::after {
         content: "";
         position: absolute;
         top: 100%;
@@ -362,30 +333,27 @@ body {
         border-width: 1rem;
         border-style: solid;
         border-color: var(--clr-vdark-grayishBlue) transparent transparent transparent;
-      }  
-
-      [class*='_tooltip'] {
-         width: 50%;
-         display: grid;
+        z-index: 1;
     }
 
-    .share_tooltip{
+    [class*='_icon'] {
+        width: 50%;
+   }
+
+   .share_icon {
         width: 100%;
         font-size: 1rem;
         letter-spacing: 0.3rem;
         color: var(--clr-grayishBlue);
         justify-self: center;
-    }
+   }
 
-    .icons {
+    .arrow_2 {
         display: none;
     }
-
-/* style 1st component - desktop */
-
-/* style 2nd component - desktop */
     
 /* style 3rd component - desktop */
+/* 3rd component styled in external stylesheet */
     
 }
 /*------------------grid area names---------------------------*/
@@ -438,32 +406,12 @@ body {
     grid-area: arrow_1;
 }
 
-.tooltiptext {
-    grid-area: tooltiptext;
-}
-
-.share_tooltip {
-    grid-area: share_tooltip;
-}
-
-.facebook_tooltip {
-    grid-area: facebook_tooltip;
-}
-
-.twiter_tooltip {
-    grid-area: twiter_tooltip;
-}
-
-.pinterest_tooltip {
-    grid-area: pinterest_tooltip;
-}
-
 .icons {
     grid-area: icons;
 }
 
-.text {
-    grid-area: text;
+.share_icon {
+    grid-area: share_icon;
 }
 
 .facebook_icon {
