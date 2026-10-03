@@ -1,73 +1,32 @@
 # Frontend Mentor - Article preview component solution
 
-This is a solution to the [FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT).
+![Static Badge](https://img.shields.io/badge/https%3A%2F%2Fimg.shields.io%2Fbadge%2FDifficulty-newbie-%236abecd?style=for-the-badge&logo=Frontend%20mentor&label=Diffilcuty&labelColor=%23555555&color=%236abecd)
 
 
-## Table of contents
+## Welcome! 👋
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-## Overview
-
-### The challenge
-
-- View the optimal layout for the component depending on their device's screen size
-- See the social media share links when they click the share icon
-
-### Screenshot
-
-![Article_preview_component](./images/article_preview_component.png)
-
-### Links
-
-- Solution URL: (https://github.com/Darionas/article-preview-component-grid)
-- Live Site URL: (https://darionas.github.io/article-preview-component-grid/)
-
-## My process
-
-* Set HTML layout:
-* Create CSS external file to set style for HTML layout:
-  * To achieve responsive web design set grid layout module:
-     * Create first for mobile;
-     * Later for desktop;
-* Create external JavaScript file.
-
-### Built with
-
-It is based on:
+## Challenge based on
 
 - HTML
-- CSS (grid layout module)
+- CSS
 - JavaScript
 
-But created with love.
+## Main goal for challenge
 
-### What I learned
+Your users should be able to:
 
-In this challange I learned:
-
-- Use tooltip in grid layout.
-
-### Continued development
-
-- Grid layout module.
-- JavaScript.
+- See the social media share links when they click the share icon
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements on the page
 
 
-## Author
+## Plan workflow
 
-- Frontend Mentor - [@Darionas](https://www.frontendmentor.io/profile/Darionas)
-
-## Acknowledgments
-
-- Thank you Frontend Mentor team for opportunity to try, practice, train yourself in different level challenges and gain invaluable experience.
-- Thank you @Vikram from Frontend Mentor for guidance.
+- [x] Create of repo (1st task)
+- [ ] Create design system (2nd task)
+- [ ] Create HTML layout (3rd task)
+- [ ] Create CSS layout for mobile first (4th task)
+- [ ] Create CSS layout for tablet (5th task)
+- [ ] Craete CSS layout for desktop (6th task)
+- [ ] Implement JavaScript (7th task)
+- [ ] Tada it is done. Congratulation you reach your goal 🎉🎉🎉
