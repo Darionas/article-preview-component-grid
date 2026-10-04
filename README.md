@@ -23,8 +23,8 @@ Your users should be able to:
 ## Plan workflow
 
 - [x] Create of repo (1st task)
-- [ ] Create design system (2nd task)
-- [ ] Create HTML layout (3rd task)
+- [x] Create design system (2nd task)
+- [x] Create HTML layout (3rd task)
 - [ ] Create CSS layout for mobile first (4th task)
 - [ ] Create CSS layout for tablet (5th task)
 - [ ] Craete CSS layout for desktop (6th task)
