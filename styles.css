@@ -1,0 +1,243 @@
+:root {
+    /* COLOR PALETTE */
+    --clr-white: #ffffff;
+    --clr-grey-900: #48556a;
+    --clr-grey-500: #6e8098;
+    --clr-grey-400: #9daec2;
+    --clr-grey-200: #ecf2f8;
+    
+    /* TYPOGRAPHY */
+    --ff-primary: 'Manrope', sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --fs-20: 1.25rem; /* 20px */
+    --fs-13: 0.8125rem; /* 13px */
+
+    --lh-130: 130%; 
+    --lh-140: 140%; 
+
+    --ls-025: 0.25px;
+    --ls-12: 0.12;
+    --ls-25: 0.25;
+
+    /* SPACING */
+    --spacing-0: 0; /* 0px */
+    --spacing-200: 1rem; /* 16px */
+    --spacing-300: 1.5rem; /* 24px */
+    --spacing-400: 2rem; /* 32px */
+    --spacing-500: 2.5rem; /* 40px */
+    --spacing-600: 3rem; /* 48px */
+    --spacing-700: 3.5rem; /* 56px */
+    --spacing-800: 4rem; /* 64px */
+    --spacing-1300: 6.5rem; /* 104px */
+    --spacing-2000: 10rem; /* 160px */
+    
+}
+
+.text-preset-1 {
+    font-size: var(--fs-20);
+    line-height: var(--lh-130);
+    letter-spacing: var(--ls-025);
+    font-weight: var(--fw-bold);
+}
+
+.text-preset-2M {
+    font-size: var(--fs-13);
+    line-height: var(--lh-140);
+    letter-spacing: var(--ls-12);
+    font-weight: var(--fw-medium);
+}
+
+.text-preset-2B {
+    font-size: var(--fs-13);
+    line-height: var(--lh-140);
+    letter-spacing: var(--ls-12);
+    font-weight: var(--fw-bold);
+}
+
+.text-preset-3 {
+    font-size: var(--fs-13);
+    line-height: var(--lh-140);
+    letter-spacing: var(--ls-25);
+    font-weight: var(--fw-regular);
+    text-transform: uppercase;
+}
+
+/* SHARE TOAST */
+.shareToast__content {
+    display: flex;
+    gap: var(--spacing-300); /* 24px */
+    align-items: center;
+    background-color: var(--clr-grey-900);
+    padding: 1.2em 2.4em;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.shareToast__content--mobile {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.shareToast__content--desktop {
+    border-radius: 10px;
+    max-width: 15em;
+}
+
+.shareToast__content--desktop::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    width: 1rem;
+    height: 0.7rem;
+    background-color: var(--clr-grey-900);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.shareToast__label {
+    color: var(--clr-grey-400);
+}
+
+.shareToast__content--mobile-links,
+.shareToast__content--desktop-links {
+    display: flex;
+    gap: var(--spacing-200); /* 16px */
+}
+
+/* PROFILE & DATE */
+.profile__container {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    gap: var(--spacing-200); /* 16px */
+    max-height: 3em;
+}
+
+.profile__container img {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.profile__info {
+    line-height: 0.5em;
+}
+
+.profile__time {
+    color: var(--clr-grey-400);
+}
+
+/* SHARE BUTTON */
+.share__buttons {
+    display: grid;
+    align-self: center;
+    gap: var(--spacing-300); /* 24px */
+    max-height: 10em; /* 120px */
+}
+
+.share__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.share__icon--default {
+    background-color: var(--clr-grey-200);
+}
+
+.share__icon--default svg path {
+    fill: var(--clr-grey-500);
+}
+
+.share__icon--active {
+    background-color: var(--clr-grey-500);
+}
+
+.share__icon--active svg path {
+    fill: var(--clr-white);
+}
+
+body {
+    display: grid;
+    align-items: center;
+    font-family: var(--ff-primary);
+    background-color: var(--clr-grey-200);
+    color: var(--clr-grey-900);
+    margin: 0;
+    padding: 0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.main__content {
+    display: grid;
+    justify-self: center;
+    width: 90%;
+    max-width: 730px;
+    box-shadow: 0px 40px 40px rgba(201, 213, 225, 0.5);
+}
+
+.article__preview {
+    display: grid;
+    gap: var(--spacing-400); /* 32px */
+    background-color: var(--clr-white);
+    border-radius: 10px;
+    position: relative;
+}
+
+.furnAccessories_img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.article__preview-content {
+    padding: 0 1.8rem 1.2rem 1.8rem;
+}
+
+.para {
+    margin-block: 1.5rem 3rem;
+    color: var(--clr-grey-500);
+}
+
+.share__icon {
+    margin-inline-start: auto;
+}
+
+.attribution {
+    width: 90%;
+    max-width: 730px;
+    margin-inline: auto;
+}
+
+.shareToast__content--mobile {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: none;
+}
+
+.shareToast__content--desktop {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: none;
+}
