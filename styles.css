@@ -166,6 +166,7 @@
     fill: var(--clr-white);
 }
 
+/* MOBILE LAYOUT */
 body {
     display: grid;
     align-items: center;
@@ -191,7 +192,7 @@ body {
 .main__content {
     display: grid;
     justify-self: center;
-    width: 90%;
+    width: 80%;
     max-width: 730px;
     box-shadow: 0px 40px 40px rgba(201, 213, 225, 0.5);
 }
@@ -241,3 +242,32 @@ body {
     width: 100%;
     display: none;
 }
+
+/* TABLET LAYOUT */
+@media (min-width: 45rem) {
+
+    .article__preview {
+        grid-template-columns: 45% 55%;
+        gap: 0;
+    }
+
+    .article__preview-content {
+        padding-block: 2.5rem;
+    }
+
+    .furnAccessories_img {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        transform: scaleX(1.25);
+        transform-origin: left;
+        clip-path: polygon(0 0, 80% 0, 80% 100%, 0 100%);
+        
+    }
+
+}
+
+/* DESKTOP LAYOUT */
+/* None */
