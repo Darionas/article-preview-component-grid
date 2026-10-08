@@ -199,15 +199,23 @@ body {
 
 .article__preview {
     display: grid;
-    gap: var(--spacing-400); /* 32px */
     background-color: var(--clr-white);
     border-radius: 10px;
     position: relative;
 }
 
-.furnAccessories_img {
+
+.img__container {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.furnAccessories_img {
+    transform: scaleY(1.15);
+    transform-origin: center;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0 83%);
 }
 
 .article__preview-content {
