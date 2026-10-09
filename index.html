@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <title>Frontend Mentor | Article preview component</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="FM_part.css">
@@ -26,26 +28,17 @@
                    uninviting. I've got some simple tips to help you make any room feel complete.
                 </p>
                 <div class="profile__container">
-                    <img src="./images/avatar-michelle.jpg" alt="Michale Appleton">
+                    <img src="./images/avatar-michelle.jpg" alt="Michelle Appleton">
                     <div class="profile__info" >
-                        <p class="profile__name text-preset-2B">Michale Appleton</p>
+                        <p class="profile__name text-preset-2B">Michelle Appleton</p>
                         <time class="profile__time text-preset-2M">28 Jun 2020</time>
                     </div>
-                    <span class="share__icon share__icon--default" ><svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg></span>
+                    <button class="share__icon" type="button" aria-expanded="false" aria-label="Share this article"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg></button>
                 </div>
             </div>
-            <div class="shareToast__content shareToast__content--mobile">
+            <div class="shareToast__content">
                 <span class="shareToast__label text-preset-3">share</span>
-                <div class="shareToast__content--mobile-links">
-                    <span><img src="./images/icon-facebook.svg" alt="Facebook Icon"></span>
-                    <span><img src="./images/icon-twitter.svg" alt="Twitter Icon"></span>
-                    <span><img src="./images/icon-pinterest.svg" alt="Pinterest Icon"></span>
-                </div>
-                <span class="share__icon share__icon--active" ><svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg></span>
-            </div>
-            <div class="shareToast__content shareToast__content--desktop">
-                <span class="shareToast__label text-preset-3">share</span>
-                <div class="shareToast__content--desktop-links">
+                <div class="shareToast__content--social">
                     <span><img src="./images/icon-facebook.svg" alt="Facebook Icon"></span>
                     <span><img src="./images/icon-twitter.svg" alt="Twitter Icon"></span>
                     <span><img src="./images/icon-pinterest.svg" alt="Pinterest Icon"></span>
@@ -54,7 +47,7 @@
         </article>
     </main>
     <footer class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. 
         Coded by <a href="https://www.frontendmentor.io/profile/Darionas">Darionas</a>.
     </footer>
 </body>
