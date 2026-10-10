@@ -33,15 +33,15 @@
                         <p class="profile__name text-preset-2B">Michelle Appleton</p>
                         <time class="profile__time text-preset-2M">28 Jun 2020</time>
                     </div>
-                    <button class="share__icon" type="button" aria-expanded="false" aria-label="Share this article"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg></button>
+                    <button class="share__icon" aria-controls="toast" type="button" aria-expanded="false" aria-label="Share this article"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg></button>
                 </div>
             </div>
-            <div class="shareToast__content">
+            <div id="toast" class="shareToast__content">
                 <span class="shareToast__label text-preset-3">share</span>
                 <div class="shareToast__content--social">
-                    <span><img src="./images/icon-facebook.svg" alt="Facebook Icon"></span>
-                    <span><img src="./images/icon-twitter.svg" alt="Twitter Icon"></span>
-                    <span><img src="./images/icon-pinterest.svg" alt="Pinterest Icon"></span>
+                    <a class="social" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="./images/icon-facebook.svg" alt="Share on Facebook"></a>
+                    <a class="social" href="https://twitter.com" target="_blank" rel="noopener noreferrer"><img src="./images/icon-twitter.svg" alt="Share on Twitter"></a>
+                    <a class="social" href="https://pinterest.com" target="_blank" rel="noopener noreferrer"><img src="./images/icon-pinterest.svg" alt="Share on Pinterest"></a>
                 </div>
             </div>
         </article>
